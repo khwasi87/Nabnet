@@ -182,3 +182,74 @@ table {
     font-weight: bold;
     font-style: normal;
 }
+
+
+/* 3. Common Style
+   ========================================================================== */
+
+* {
+    /* box-sizing: border-box; */
+    transition: .2s ease-in-out;
+}
+
+:root {
+    --white: #fff;
+    --black: #111;
+    --yellow: #D9B500;
+    --darkgreen: #096540;
+    --green: #47BB8C;
+    --lightgreen: #D6FFDA;
+    --grey: #00000029;
+    --primaryText: #0F2439;
+    --secondaryText: #BCBCBC;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+a {
+    width: auto;
+    display: inline-block;
+    color: var(--primaryText);
+    text-decoration: none;
+}
+
+h2,
+h3 {
+    font-weight: bold;
+}
+
+input,
+button {
+    width: auto;
+    display: inline-block;
+    outline: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 2560px;
+    height: 100vh;
+    margin: 0 auto;
+    background-image: url(../images/barley-field.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y: auto;
+}
+
+.wrapper {
+    width: 70%;
+    max-width: calc(2560px - 30%);
+    margin: 0 auto;
+}
