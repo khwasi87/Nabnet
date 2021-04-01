@@ -253,3 +253,52 @@ button {
     max-width: calc(2560px - 30%);
     margin: 0 auto;
 }
+
+
+/* 4. Main Style
+   ========================================================================== */
+
+
+/* Header Style */
+
+header>div:first-child {
+    padding: 8px 0;
+    background: var(--darkgreen);
+}
+
+header p {
+    color: var(--white);
+    font-size: 14px;
+    text-align: center;
+}
+
+.site-header {
+    padding: 70px 0;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 180px;
+    height: auto;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    z-index: 1;
+}
+
+.logo a {
+    text-indent: -9999px;
+}
+
+.logo img {
+    float: right;
+}
+
+.title {
+    margin: 0 auto;
+    color: var(--darkgreen);
+    font-size: 2em;
+    text-align: center;
+}
