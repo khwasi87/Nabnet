@@ -295,6 +295,16 @@ header p {
     float: right;
 }
 
+.search-content {
+    display: flex;
+    justify-content: center;
+}
+
+input#search,
+button.search-icon {
+    padding: 15px;
+}
+
 .title {
     margin: 0 auto;
     color: var(--darkgreen);
