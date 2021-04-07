@@ -344,10 +344,25 @@ input#search::placeholder {
     padding: 15px;
     margin: 15px 0;
     width: 25%;
+    border-radius: 10px;
 }
 
 .accordion-header {
     display: flex;
     justify-content: space-between;
-    margin: 10px auto;
+    margin: 15px 0;
+}
+
+.accordion-body .link-list .list a {
+    display: flex;
+}
+
+.accordion-body .link-list .list a span {
+    margin: auto;
+}
+
+.accordion-body .link-list .list {
+    margin: 15px 0;
+    background-color: var(--lightgreen);
+    padding: 15px;
 }
