@@ -287,7 +287,7 @@ header p {
 }
 
 .logo a {
-    text-indent: -9999px;
+    text-indent: -999px;
 }
 
 .logo img {
@@ -297,7 +297,10 @@ header p {
 .search-content {
     width: 100%;
     display: flex;
-    justify-content: center;
+}
+
+.form-feild {
+    margin: auto;
 }
 
 input#search,
