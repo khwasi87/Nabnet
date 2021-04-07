@@ -234,6 +234,7 @@ button {
     width: auto;
     display: inline-block;
     outline: none;
+    border: 0;
 }
 
 .container {
@@ -290,22 +291,28 @@ header p {
     text-indent: -999px;
 }
 
-.logo img {
-    float: right;
+.search-content {
+    margin: 15px auto;
 }
 
-.search-content {
+.form-field {
     width: 100%;
     display: flex;
+    justify-content: center;
 }
 
-.form-feild {
-    margin: auto;
+input#search {
+    width: 50%;
+}
+
+.logo img {
+    float: right;
 }
 
 input#search,
 button.search-icon {
     padding: 15px;
+    font-size: 16px;
 }
 
 button.search-icon {
@@ -315,9 +322,32 @@ button.search-icon {
     color: var(--white);
 }
 
+input#search::placeholder {
+    font-size: 16px;
+}
+
 .title {
     margin: 0 auto;
     color: var(--darkgreen);
     font-size: 2em;
     text-align: center;
+}
+
+.accordion-panel {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.accordion {
+    background-color: var(--white);
+    padding: 15px;
+    margin: 15px 0;
+    width: 25%;
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px auto;
 }
