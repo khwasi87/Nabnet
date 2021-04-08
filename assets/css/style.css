@@ -255,6 +255,13 @@ button {
     margin: 0 auto;
 }
 
+footer {
+    position: static;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--yellow);
+}
+
 
 /* 4. Main Style
    ========================================================================== */
@@ -265,6 +272,9 @@ button {
 header>div:first-child {
     padding: 8px 0;
     background: var(--darkgreen);
+    position: absolute;
+    top: 0;
+    width: 100%;
 }
 
 header p {
@@ -274,15 +284,17 @@ header p {
 }
 
 .site-header {
-    padding: 70px 0;
-    position: relative;
+    padding: 30px 0;
     display: flex;
     flex-wrap: wrap;
 }
 
+.site-header .title {
+    margin: auto;
+}
+
 .logo {
     height: auto;
-    position: absolute;
     top: 10px;
     left: 0;
 }
@@ -335,8 +347,10 @@ input#search::placeholder {
 
 .accordion-panel {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    align-items: flex-start;
     flex-wrap: wrap;
+    margin-bottom: 5em;
 }
 
 .accordion {
@@ -345,6 +359,11 @@ input#search::placeholder {
     margin: 15px 0;
     width: 25%;
     border-radius: 10px;
+}
+
+.accordion-body {
+    overflow: auto;
+    height: 140px;
 }
 
 .accordion-header {
@@ -365,4 +384,10 @@ input#search::placeholder {
     margin: 15px 0;
     background-color: var(--lightgreen);
     padding: 15px;
+}
+
+footer .wrapper {
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
 }
