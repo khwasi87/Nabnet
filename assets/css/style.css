@@ -3,62 +3,453 @@
    License: none (public domain)
 */
 
+
 /* 1.1 Reset Style Sheet
    ========================================================================== */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
+
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
 }
+
 body {
-	line-height: 1;
+    line-height: 1;
 }
-ol, ul {
-	list-style: none;
+
+ol,
+ul {
+    list-style: none;
 }
-blockquote, q {
-	quotes: none;
+
+blockquote,
+q {
+    quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
+
 
 /* 1.2 Clear Fix
    ========================================================================== */
 
 .cf:before,
 .cf:after {
-  display: table;
-  content: " ";
+    display: table;
+    content: " ";
 }
 
-.cf:after { clear: both; }
+.cf:after {
+    clear: both;
+}
 
-.cf { *zoom: 1; }
+.cf {
+    *zoom: 1;
+}
+
+
+/* 2. Font Face Declaration
+   ========================================================================== */
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../vendor/fonts/Roboto/Roboto-Regular-webfont.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../vendor/fonts/Roboto/Roboto-Medium-webfont.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../vendor/fonts/Roboto/Roboto-Bold-webfont.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+/* 3. Common Style
+   ========================================================================== */
+
+* {
+    /* box-sizing: border-box; */
+    transition: .2s ease-in-out;
+}
+
+:root {
+    --white: #fff;
+    --black: #111;
+    --yellow: #D9B500;
+    --darkgreen: #096540;
+    --green: #47BB8C;
+    --lightgreen: #D6FFDA;
+    --grey: #00000029;
+    --primaryText: #0F2439;
+    --secondaryText: #BCBCBC;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+a {
+    width: auto;
+    display: inline-block;
+    color: var(--primaryText);
+    text-decoration: none;
+}
+
+h2,
+h3 {
+    font-weight: bold;
+}
+
+input,
+button {
+    width: auto;
+    display: inline-block;
+    outline: none;
+    border: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 2560px;
+    min-height: calc(100vh - 46px);
+    margin: 0 auto;
+    background-image: url(../images/barley-field.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.wrapper {
+    width: 80%;
+    max-width: calc(2560px - 30%);
+    margin: 0 auto;
+}
+
+footer {
+    background-color: var(--yellow);
+}
+
+
+/* 4. Main Style
+   ========================================================================== */
+
+
+/* Header Style */
+
+header>div:first-child {
+    padding: 8px 0;
+    background: var(--darkgreen);
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+header p {
+    color: var(--white);
+    font-size: 14px;
+    text-align: center;
+}
+
+.site-header {
+    padding: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.site-header .title {
+    margin: auto;
+}
+
+.logo {
+    height: auto;
+    top: 10px;
+    left: 0;
+}
+
+.logo a {
+    text-indent: -999px;
+}
+
+.search-content {
+    margin: 15px auto;
+}
+
+.form-field {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+input#search {
+    width: 50%;
+}
+
+.logo img {
+    float: right;
+}
+
+input#search,
+button.search-icon {
+    padding: 15px;
+    font-size: 16px;
+}
+
+button.search-icon {
+    font-size: 14px;
+    border: 0;
+    background-color: var(--green);
+    color: var(--white);
+}
+
+input#search::placeholder {
+    font-size: 16px;
+}
+
+.title {
+    margin: 0 auto;
+    color: var(--darkgreen);
+    font-size: 2em;
+    text-align: center;
+}
+
+.accordion-panel {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.accordion {
+    background-color: var(--white);
+    padding: 15px;
+    margin: 15px 0;
+    width: 25%;
+    border-radius: 10px;
+}
+
+.accordion-body {
+    overflow: auto;
+    height: 140px;
+    display: none;
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+.accordion-body .link-list .list a {
+    display: flex;
+}
+
+.accordion-body .link-list .list a span {
+    margin: auto;
+}
+
+.accordion-body .link-list .list {
+    margin: 15px 0;
+    background-color: var(--lightgreen);
+    padding: 15px;
+}
+
+footer .wrapper {
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+/* ======tab formate======= */
+
+@media screen and (max-width:768px) {
+    .logo a {
+        width: 180px;
+    }
+    .site-header {
+        padding: 50px 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .site-header .title {
+        font-size: 1.8rem;
+        margin: auto;
+    }
+    input#search {
+        width: 80%;
+    }
+    .accordion {
+        background-color: var(--white);
+        padding: 15px;
+        margin: 15px 0;
+        width: 40%;
+        border-radius: 10px;
+    }
+}
+
+
+/* =====end tab format====== */
+
+
+/* ======mobile formate======= */
+
+@media screen and (max-width:425px) {
+    .logo a {
+        width: 180px;
+    }
+    .site-header {
+        padding: 50px 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .site-header .title {
+        font-size: 1.8rem;
+        margin: 15px auto;
+    }
+    input#search {
+        width: 100%;
+    }
+    .accordion {
+        background-color: var(--white);
+        padding: 15px;
+        margin: 15px 0;
+        width: 100%;
+        border-radius: 10px;
+    }
+}
+
+
+/* ======End mobile formate======= */
