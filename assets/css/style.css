@@ -389,5 +389,68 @@ input#search::placeholder {
 footer .wrapper {
     padding: 15px;
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     justify-content: space-around;
+}
+
+
+/* ======mobile formate======= */
+
+@media screen and (max-width:414px) {
+    .logo a {
+        width: 180px;
+    }
+    .site-header {
+        padding: 50px 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .site-header .title {
+        font-size: 1.8rem;
+        margin: 15px auto;
+    }
+    input#search {
+        width: 100%;
+    }
+    .accordion {
+        background-color: var(--white);
+        padding: 15px;
+        margin: 15px 0;
+        width: 100%;
+        border-radius: 10px;
+    }
+}
+
+
+/* ======End mobile formate======= */
+
+
+/* ======tab formate======= */
+
+@media screen and (max-width:768px) {
+    .logo a {
+        width: 180px;
+    }
+    .site-header {
+        padding: 50px 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .site-header .title {
+        font-size: 1.8rem;
+        margin: auto;
+    }
+    input#search {
+        width: 80%;
+    }
+    .accordion {
+        background-color: var(--white);
+        padding: 15px;
+        margin: 15px 0;
+        width: 40%;
+        border-radius: 10px;
+    }
 }
