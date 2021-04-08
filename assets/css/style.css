@@ -389,6 +389,10 @@ input#search::placeholder {
     padding: 15px;
 }
 
+.form-field button {
+    cursor: pointer;
+}
+
 footer .wrapper {
     padding: 15px;
     display: flex;
