@@ -362,6 +362,12 @@ input#search::placeholder {
     display: none;
 }
 
+.accordion-expand {
+    display: block;
+    overflow: auto;
+    height: 140px;
+}
+
 .accordion-header {
     display: flex;
     justify-content: space-between;
