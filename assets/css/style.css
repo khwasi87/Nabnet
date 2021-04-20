@@ -286,7 +286,7 @@ header p {
 }
 
 .site-header .title {
-    margin: auto;
+    margin: auto 25%;
 }
 
 .logo {
