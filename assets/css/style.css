@@ -368,7 +368,7 @@ input#search::placeholder {
     height: 140px;
 }
 
-.accordion-header {
+span {
     display: flex;
     justify-content: space-between;
     margin: 5px 0;
@@ -398,7 +398,7 @@ footer .wrapper {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 
